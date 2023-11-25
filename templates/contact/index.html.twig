@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire du Contact{% endblock %}
+
+{% block body %}
+
+{% for message in app.flashes('success')%}
+<div class="alert alert-success mt-4">
+ {{message}}
+</div>
+
+{% endfor %}
+
+<div class="container">
+{{form(form)}}
+
+</div>
+
+
+{% endblock %}
